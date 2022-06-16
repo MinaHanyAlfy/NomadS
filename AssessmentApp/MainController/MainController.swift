@@ -12,18 +12,24 @@ The initial viewcontroller should show the shopping basket.
 It should contain a 'Plus' button for adding new items to the basket.
 It should contain a 'Clear' button for removing all items in the basket.
 """)
+
 protocol MainViewProtocol: AnyObject {
     func ProductsSuccess(products: Products,keys: [String])
 }
 class MainController: UIViewController,MainViewProtocol {
     
-    
     private var viewModel: MainViewModelProtocol!
     private var products: Products = [:]
     private var keys: [String] = []{
         didSet{
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
+            DispatchQueue.main.async { [self] in
+                if keys.isEmpty{
+                    self.noProductsViewLayout()
+                    
+                }else{
+                    tableView.isHidden = false
+                    self.tableView.reloadData()
+                }
             }
         }
     }
@@ -35,6 +41,10 @@ class MainController: UIViewController,MainViewProtocol {
         viewModel = MainViewModel(view: self)
         viewModel.productsResult()
         tableViewHandler()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
     }
     
     private func registerCell(){
@@ -48,6 +58,9 @@ class MainController: UIViewController,MainViewProtocol {
         tableView.estimatedRowHeight = 88
         registerCell()
     }
+    @IBAction func cartAction(_ sender: Any) {
+        
+    }
 }
 
 extension MainController: UITableViewDelegate, UITableViewDataSource{
@@ -57,10 +70,9 @@ extension MainController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductTableViewCell", for: indexPath) as! ProductTableViewCell
-        
         let key = keys[indexPath.row]
         guard let product = products[key] else{return UITableViewCell()}
-        cell.handleCell(product: product)
+        cell.handleCell(product: product,key: key)
         
         return cell
     }
@@ -90,6 +102,22 @@ extension MainController{
             deVc.product = product
             
         }
+        if segue.identifier == "productsCart" {
+            let cartVc = segue.destination as! CartViewController
+            
+            
+        }
         
     }
+    private func noProductsViewLayout(){
+        DispatchQueue.main.async {[self] in
+            print("No Layout")
+            tableView.isHidden = true
+            let noProudctView = ZeroStateView(frame: CGRect(x: 0, y: 0, width: view.frame.width/2, height: view.frame.width/2))
+            noProudctView.center = view.center
+            view.addSubview(noProudctView)
+        }
+        
+    }
+    
 }

@@ -7,28 +7,36 @@
 
 import UIKit
 
-protocol DetailViewProtocol: AnyObject {
-    func ProductSuccess(product: Product)
-}
-
-class DetailController: UIViewController,DetailViewProtocol {
+//protocol DetailViewProtocol: AnyObject {
+//    func ProductSuccess(product: Product)
+//}
+//,DetailViewProtocol
+class DetailController: UIViewController {
   
+    @IBOutlet weak var productImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
     var product : Product? {
         didSet {
-            DispatchQueue.main.async {
+            DispatchQueue.main.async { [self] in
                 guard let product = self.product else {
                     return
                 }
-
-                self.viewModel.productResult(product: product)
+                nameLabel.text = product.name
+                descriptionLabel.text = product.productsDescription
+                if let price = product.costPrice ?? product.retailPrice {
+                priceLabel.text = "\(price)$"
+                downloadImage(from: URL(string: product.imageURL ?? "https://www.dmplayhouse.com/wp-content/uploads/2019/12/13-512.png")!)
+                }
             }
         }
     }
-    private var viewModel: DetailViewModelProtocol!
+//    private var viewModel: DetailViewModelProtocol!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = DetailViewModel(view: self)
+//        viewModel = DetailViewModel(view: self)
         // Do any additional setup after loading the view.
     }
     
@@ -36,8 +44,24 @@ class DetailController: UIViewController,DetailViewProtocol {
 
 }
 extension DetailController{
-    func ProductSuccess(product: Product) {
-        self.product = product
+//    func ProductSuccess(product: Product) {
+////        self.product = product
+//    }
+    
+    private func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
     }
     
+    private func downloadImage(from url: URL) {
+        print("Download Started")
+        getData(from: url) { data, response, error in
+            guard let data = data, error == nil else { return }
+            print(response?.suggestedFilename ?? url.lastPathComponent)
+            print("Download Finished")
+            DispatchQueue.main.async() { [weak self] in
+                self?.productImageView.image = UIImage(data: data)
+            }
+        }
+    }
+
 }

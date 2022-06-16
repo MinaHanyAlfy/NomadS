@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F8C39FD285B135C00C7DBC6 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8C39FC285B135C00C7DBC6 /* CartViewController.swift */; };
+		7F8C39FF285B163C00C7DBC6 /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8C39FE285B163C00C7DBC6 /* CartViewModel.swift */; };
+		7F8C3A06285B53C200C7DBC6 /* ProductCD+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8C3A04285B53C200C7DBC6 /* ProductCD+CoreDataClass.swift */; };
+		7F8C3A07285B53C200C7DBC6 /* ProductCD+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8C3A05285B53C200C7DBC6 /* ProductCD+CoreDataProperties.swift */; };
+		7F8C3A0A285BACD800C7DBC6 /* ZeroStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8C3A09285BACD800C7DBC6 /* ZeroStateView.swift */; };
 		7F8F928E2859D0BD00994017 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8F928D2859D0BD00994017 /* API.swift */; };
 		7F8F92902859D0C600994017 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8F928F2859D0C600994017 /* EndPoint.swift */; };
 		7F8F92922859D0D200994017 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8F92912859D0D200994017 /* ErrorMessage.swift */; };
@@ -15,8 +20,6 @@
 		7F8F929A2859D34400994017 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8F92982859D34400994017 /* ProductTableViewCell.swift */; };
 		7F8F929B2859D34400994017 /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F8F92992859D34400994017 /* ProductTableViewCell.xib */; };
 		7F8F929F285A180600994017 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8F929E285A180600994017 /* CoreDataManager.swift */; };
-		7F8F92AF285A220800994017 /* ProductCD+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8F92AD285A220800994017 /* ProductCD+CoreDataClass.swift */; };
-		7F8F92B0285A220800994017 /* ProductCD+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8F92AE285A220800994017 /* ProductCD+CoreDataProperties.swift */; };
 		8EB5CCB927988A0700396097 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB5CCB827988A0700396097 /* AppDelegate.swift */; };
 		8EB5CCBB27988A0700396097 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB5CCBA27988A0700396097 /* SceneDelegate.swift */; };
 		8EB5CCC027988A0700396097 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EB5CCBE27988A0700396097 /* Main.storyboard */; };
@@ -52,6 +55,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F8C39FC285B135C00C7DBC6 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		7F8C39FE285B163C00C7DBC6 /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
+		7F8C3A04285B53C200C7DBC6 /* ProductCD+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductCD+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7F8C3A05285B53C200C7DBC6 /* ProductCD+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductCD+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7F8C3A09285BACD800C7DBC6 /* ZeroStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeroStateView.swift; sourceTree = "<group>"; };
 		7F8F928D2859D0BD00994017 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		7F8F928F2859D0C600994017 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		7F8F92912859D0D200994017 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
@@ -60,8 +68,6 @@
 		7F8F92982859D34400994017 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		7F8F92992859D34400994017 /* ProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
 		7F8F929E285A180600994017 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		7F8F92AD285A220800994017 /* ProductCD+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductCD+CoreDataClass.swift"; sourceTree = "<group>"; };
-		7F8F92AE285A220800994017 /* ProductCD+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductCD+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8EB5CCB527988A0700396097 /* AssessmentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssessmentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EB5CCB827988A0700396097 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EB5CCBA27988A0700396097 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +114,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F8C39FB285B133D00C7DBC6 /* CartController */ = {
+			isa = PBXGroup;
+			children = (
+				7F8C39FC285B135C00C7DBC6 /* CartViewController.swift */,
+				7F8C39FE285B163C00C7DBC6 /* CartViewModel.swift */,
+			);
+			path = CartController;
+			sourceTree = "<group>";
+		};
+		7F8C3A08285BAC9C00C7DBC6 /* ZeroState */ = {
+			isa = PBXGroup;
+			children = (
+				7F8C3A09285BACD800C7DBC6 /* ZeroStateView.swift */,
+			);
+			path = ZeroState;
+			sourceTree = "<group>";
+		};
 		7F8F928C2859D0A900994017 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +145,7 @@
 		7F8F92972859D31A00994017 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7F8C3A08285BAC9C00C7DBC6 /* ZeroState */,
 				8EB5CCBE27988A0700396097 /* Main.storyboard */,
 				8EB5CCC627988A0900396097 /* LaunchScreen.storyboard */,
 				7F8F929C2859D34C00994017 /* MainCell */,
@@ -150,8 +174,8 @@
 		7F8F92A4285A1ADA00994017 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				7F8F92AD285A220800994017 /* ProductCD+CoreDataClass.swift */,
-				7F8F92AE285A220800994017 /* ProductCD+CoreDataProperties.swift */,
+				7F8C3A04285B53C200C7DBC6 /* ProductCD+CoreDataClass.swift */,
+				7F8C3A05285B53C200C7DBC6 /* ProductCD+CoreDataProperties.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -179,6 +203,7 @@
 		8EB5CCB727988A0700396097 /* AssessmentApp */ = {
 			isa = PBXGroup;
 			children = (
+				7F8C39FB285B133D00C7DBC6 /* CartController */,
 				8EB5CCEB27988A5900396097 /* DemoData */,
 				7F8F92972859D31A00994017 /* View */,
 				8EB5CCF827988DB800396097 /* AppDelegate */,
@@ -396,15 +421,18 @@
 				7F8F92942859D2FA00994017 /* MainViewModel.swift in Sources */,
 				7F8F92902859D0C600994017 /* EndPoint.swift in Sources */,
 				7F8F928E2859D0BD00994017 /* API.swift in Sources */,
+				7F8C39FD285B135C00C7DBC6 /* CartViewController.swift in Sources */,
 				8EB5CCC327988A0700396097 /* AssessmentApp.xcdatamodeld in Sources */,
 				7F8F92962859D30500994017 /* DetailViewModel.swift in Sources */,
 				8EB5CCB927988A0700396097 /* AppDelegate.swift in Sources */,
-				7F8F92AF285A220800994017 /* ProductCD+CoreDataClass.swift in Sources */,
 				8EB5CCBB27988A0700396097 /* SceneDelegate.swift in Sources */,
-				7F8F92B0285A220800994017 /* ProductCD+CoreDataProperties.swift in Sources */,
+				7F8C3A0A285BACD800C7DBC6 /* ZeroStateView.swift in Sources */,
+				7F8C39FF285B163C00C7DBC6 /* CartViewModel.swift in Sources */,
 				8EB5CCFB27988DF400396097 /* DetailController.swift in Sources */,
+				7F8C3A07285B53C200C7DBC6 /* ProductCD+CoreDataProperties.swift in Sources */,
 				7F8F929F285A180600994017 /* CoreDataManager.swift in Sources */,
 				8EB5CCF227988A8100396097 /* Product.swift in Sources */,
+				7F8C3A06285B53C200C7DBC6 /* ProductCD+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,6 +617,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -600,7 +629,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -617,6 +646,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -628,7 +658,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

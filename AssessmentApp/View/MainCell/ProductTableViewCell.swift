@@ -6,34 +6,48 @@
 //
 
 import UIKit
-
 class ProductTableViewCell: UITableViewCell {
-
+    let coreDataManager = CoreDataManager.shared
+    func didTapPlus(product: Product, key: String) {
+        coreDataManager.saveProduct(product: product, key: key)
+    }
+    
+    private var product: Product?
+    private var key: String?
     @IBOutlet weak var productImageView: UIImageView!
+  
+    @IBOutlet weak var plusButton: UIButton!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         productImageView.clipsToBounds = true
         productImageView.layer.cornerRadius = 12
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
    
-    public func handleCell(product: Product){
-        if let price = product.retailPrice {
+    public func handleCell(product: Product,key: String){
+        if let price = product.retailPrice ?? product.costPrice{
             priceLabel.text = "\(price)$"
         }
-        if let price = product.costPrice {
-            priceLabel.text = "\(price)$"
-        }
+        
         nameLabel.text = product.name ?? ""
         downloadImage(from: URL(string: product.imageURL ?? "https://www.dmplayhouse.com/wp-content/uploads/2019/12/13-512.png")!)
+        self.product = product
+        self.key = key
+    }
+    
+    //Adding to cart
+    @IBAction func plusAction(_ sender: Any) {
+        guard let product = product else {return}
+        guard let key = key else {return}
+        print(key,product)
+        coreDataManager.saveProduct(product: product, key: key)
     }
     
     override func prepareForReuse() {

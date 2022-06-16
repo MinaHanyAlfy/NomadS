@@ -2,7 +2,7 @@
 //  ProductCD+CoreDataProperties.swift
 //  AssessmentApp
 //
-//  Created by John Doe on 2022-06-15.
+//  Created by John Doe on 2022-06-16.
 //
 //
 
@@ -17,13 +17,13 @@ extension ProductCD {
     }
 
     @NSManaged public var barcode: String?
-    @NSManaged public var productsDescription: String?
+    @NSManaged public var costPrice: Int64
     @NSManaged public var id: String?
     @NSManaged public var imageURL: String?
-    @NSManaged public var retailPrice: Int64
-    @NSManaged public var name: String?
-    @NSManaged public var costPrice: Int64
     @NSManaged public var key: String?
+    @NSManaged public var name: String?
+    @NSManaged public var productsDescription: String?
+    @NSManaged public var retailPrice: Int64
 
 }
 
